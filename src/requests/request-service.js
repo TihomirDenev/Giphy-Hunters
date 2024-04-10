@@ -1,7 +1,7 @@
 import {
   getGifs,
   getGifsById,
-  getGifsDetailedInfo,
+  getGifsDetailedInfo
 } from '../data/fetch-gifs.js';
 
 // request for getting the gif and return it
