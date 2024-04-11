@@ -22,9 +22,10 @@ export const getGifsDetailedInfo = async (gifId = null) => {
   return data.data;
 };
 
-//TODO
-export const searchGifs = (searchTerm = '') => {
-  // search gifs
+export const searchGifsAsync = async (searchTerm = '') => {
+  const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchTerm}`);
+  const dataJson = await response.json();
+  return dataJson.data;
 };
 
 export const getTrendyGif = async () => {
