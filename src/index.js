@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //     +(event.target.getAttribute(/* your correct data attribute here */))
     //   );
     // }
-    // if (event.target.classList.contains('favorite')) {
-    //   toggleFavoriteStatus(+event.target.getAttribute('data-movie-id'));
-    // }
+    // favorite button click event
+    if (event.target.classList.contains('favorite')) {
+      const gifId = event.target.getAttribute('data-gif-id');
+      toggleFavoriteStatus(gifId);
+    }
   });
 
   // search events
