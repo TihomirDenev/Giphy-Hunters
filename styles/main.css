@@ -71,11 +71,26 @@ footer {
 }
 
 .active {
-  color: #f06d06;
+  color: #dc5b52;
 }
 
 
 .favorite:hover{
   color: #d90536b9;
   font-size: 20px;
+}
+
+.viewDetails {
+  display: flex;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.viewDetails:hover {
+  background-color: #0056b3;
 }
