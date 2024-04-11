@@ -5,3 +5,14 @@ export const toTrendingView = () => `
   </div>
 </div>
 `;
+
+
+
+// `
+// <div id="home">
+//   <h1>Giphy Hunters</h1>
+//   <div class="content">
+//   ${URL.map((el) => `<img src=${el} alt="missing img"></img>`)}
+//   </div>
+// </div>
+// `;
