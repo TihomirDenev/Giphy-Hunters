@@ -1,3 +1,4 @@
+/*STYLE FOR MAIN PAGE LOOK*/
 body,
 h1,
 h2,
@@ -50,7 +51,7 @@ nav {
 }
 
 .nav-link:hover {
-  color: #f06d06;
+  color: #f0b506;
 }
 
 /* Styling container */
@@ -74,8 +75,118 @@ footer {
   color: #f06d06;
 }
 
-
-.favorite:hover{
+.favorite:hover {
   color: #d90536b9;
   font-size: 20px;
+  cursor: pointer;
+  /* Change cursor to pointer when hovering */
+}
+
+
+
+/*STYLE FOR TRENDING PAGE*/
+/* Style for the main container */
+#Trendy {
+  max-width: 800px;
+  /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  /* Center text */
+}
+
+/* Style for the heading */
+#Trendy h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+/* Style for the paragraph */
+#Trendy p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Style for the GIF container */
+.content .gif-container {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for the GIF image */
+.content .gif-container img {
+  width: 200px;
+  /* Adjust as needed */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*SINGLE GIF LOOK*/
+.gif {
+  border: 3px solid #918a8a; /* Adjust border thickness */
+  padding: 10px; /* Add some padding for better spacing */
+  text-align: center; /* Center align the content */
+  background-color: #e5eaed; /* Background color for the border */
+}
+
+.gif img {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Make the image behave like a block element */
+  margin: 0 auto 10px; /* Center the image horizontally and add space below */
+}
+
+
+
+.view-gif-btn {
+  display: inline-block; /* Make the button inline with the image */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Add padding to the button */
+  border-radius: 4px; /* Add border radius to the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 10px; /* Add margin to separate button from favorite status */
+}
+
+.nav-link#Back {
+  display: inline-block; /* Make the button inline with the image */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Add padding to the button */
+  border-radius: 4px; /* Add border radius to the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-right: 10px; /* Add margin to separate button from favorite status */
+}
+
+
+/*TRENDING PAGE VIEW*/
+.gif-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gif {
+  flex-basis: calc(36.33% - 20px); /* Adjust this value as needed for spacing */
+  margin-bottom: 20px; /* Adjust this value as needed for spacing */
+}
+
+
+/* GIF DETAILED LOOK */
+.gif-detailed {
+  display: flex; /* Use flexbox for layout */
+  margin-top: 30px; /* Increased bottom margin for more space */
+}
+
+.gif-info {
+  flex: 4;
+  margin-top: 12px;
+  margin-left: 48px;
+  text-align: left; /* Center align text */
 }
