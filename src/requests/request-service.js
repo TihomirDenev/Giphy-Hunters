@@ -5,9 +5,9 @@ import {
 } from '../data/fetch-gifs.js';
 
 // request for getting the gif and return it
-export const loadGifs = () => {
-  const gif = getGifs();
-  return gif;
+export const loadGifs = async () => {
+  const imageURL = await getGifs();
+  return imageURL;
 };
 
 // visualize gifs with buttons - view details and heart (add favorite)

@@ -1,4 +1,5 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF } from '../common/constants.js';
+import { loadGifs } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toHomeView } from '../views/home-view.js';
@@ -42,7 +43,8 @@ export const loadPage = (page = '') => {
   }
 };
 
-const renderHome = () => {
+const renderHome = async () => {
+  //const imageURL = await loadGifs();
   q(CONTAINER_SELECTOR).innerHTML = toHomeView();
 };
 
