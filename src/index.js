@@ -1,6 +1,6 @@
 import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
-import { loadPage } from './events/navigation-events.js';
+import { loadPage, renderGifDetails } from './events/navigation-events.js';
 import { renderSearchItems } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 
@@ -14,11 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // show gifs events
     // TODO
-    // if (event.target.classList.contains(/* your button class here */)) {
-    //   renderGifDetails(
-    //     +(event.target.getAttribute(/* your correct data attribute here */))
-    //   );
-    // }
+    if (event.target.classList.contains('view-gif-btn')) {
+      renderGifDetails((event.target.getAttribute('data-gif-id')));
+    }
+
     // favorite button click event
     if (event.target.classList.contains('favorite')) {
       const gifId = event.target.getAttribute('data-gif-id');
