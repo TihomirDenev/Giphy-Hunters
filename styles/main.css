@@ -73,3 +73,9 @@ footer {
 .active {
   color: #f06d06;
 }
+
+
+.favorite:hover{
+  color: #d90536b9;
+  font-size: 20px;
+}
