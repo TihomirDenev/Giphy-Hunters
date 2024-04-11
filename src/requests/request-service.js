@@ -13,8 +13,8 @@ export const loadGifsById = (id = null) => {
 };
 
 // after view details button - the information for gif
-export const loadGifDetail = (id = null) => {
-  const gif = getGifsDetailedInfo(id);
+export const loadGifDetail = async (id = null) => {
+  const gif = await getGifsDetailedInfo(id);
   return gif;
 };
 
