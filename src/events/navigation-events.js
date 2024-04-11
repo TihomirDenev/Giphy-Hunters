@@ -1,7 +1,8 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF, } from '../common/constants.js';
-import { loadGifs, loadTrendyGifAsync } from '../requests/request-service.js';
+import { loadGifDetail, loadGifs, loadTrendyGifAsync } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
+import { toSingleGifView } from '../views/gif-views.js';
 import { toHomeView } from '../views/home-view.js';
 import { toTrendingView } from '../views/trending-view.js';
 import { toUploadGifView } from '../views/upload-gif-view.js';
@@ -35,12 +36,15 @@ export const loadPage = (page = '') => {
       setActiveNav(ABOUT);
       return renderAbout();
 
-    // missing partial implementation
-
     /* if the app supports error logging, use default to log mapping errors */
     default:
       return null;
   }
+};
+
+export const renderGifDetails = async (id = null) => {
+  const gif = await loadGifDetail(id);
+  q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(gif);
 };
 
 const renderHome = async () => {
