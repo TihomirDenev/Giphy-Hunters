@@ -1,4 +1,4 @@
-export const toHomeView = (URL) => `
+export const toHomeView = (gifData) => `
 <div id="home">
   <h1>Giphy Hunters</h1>
   <div class="content">
