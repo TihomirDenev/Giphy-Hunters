@@ -11,7 +11,7 @@ export const toSingleGifView = (gif) => `
 
 export const toGifSimple = (gif) => `
 <div class="gif">
-    <img src="${gif}" alt="missing image"><br>
+    <img src="${gif.images.original.url}" alt="missing image"><br>
     <button class="view-gif-btn" data-gif-id="${gif.id}">View Gif details</button>
     ${renderFavoriteStatus(gif.id)}
 </div>
