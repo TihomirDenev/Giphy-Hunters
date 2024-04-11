@@ -252,7 +252,6 @@ footer {
 
 .button-container {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
   padding: 5px 0;
   display: flex; /* Use flexbox */
   justify-content: center; /* Center the buttons horizontally */
