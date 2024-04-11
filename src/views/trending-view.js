@@ -6,17 +6,21 @@ export const toTrendingView = (gif) => `
     <h1>Trending</h1>
     <h2>Here you can find the latest trending giphys</h2>
     <div class="trending-gif-container">
-    ${gif.data.map(
-      (obj) =>
-        ` 
-          <img src="${obj.images.fixed_height.url}" alt="missing img"></img> 
-          ${renderFavoriteStatus(
-            obj.id
-          )}<button class="viewDetails" data-gif-id="${
-          obj.id
-        }">View Details</button> `
-    )}
-</div>
+      ${gif.data.map(
+        (obj) =>
+          ` 
+          <div class="gif-wrapper">
+            <img src="${obj.images.fixed_height.url}" alt="missing img"></img> 
+            <div class="button-container">
+              <button class="viewDetails" data-gif-id="${
+                obj.id
+              }">View Details</button>
+              ${renderFavoriteStatus(obj.id)}
+            </div>
+          </div>
+          `
+      )}
+    </div>
   </div>
 </div>
 `;
