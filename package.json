@@ -1,0 +1,30 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "Awesome Tool for Gif",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "doc": "jsdoc array-utils.js",
+    "lint": "eslint",
+    "lint-fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A58-Agents-Team1/Web-Project.git"
+  },
+  "author": "Tanya, Radoslav, Tihomir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A58-Agents-Team1/Web-Project/issues"
+  },
+  "homepage": "https://github.com/A58-Agents-Team1/Web-Project#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  },
+  "dependencies": {
+    "jsdoc": "^4.0.2"
+  }
+}
