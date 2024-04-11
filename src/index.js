@@ -1,7 +1,7 @@
 import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
 import { loadPage } from './events/navigation-events.js';
-import { renderSearchItems } from './events/search-events.js';
+import { renderSearchItemsAsync } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // search events
   q('input#search').addEventListener('input', (event) => {
-    renderSearchItems(event.target.value);
+    renderSearchItemsAsync(event.target.value);
   });
 
   loadPage(HOME);
