@@ -1,6 +1,6 @@
 import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
-import { loadPage } from './events/navigation-events.js';
+import { loadPage, renderGifDetails} from './events/navigation-events.js';
 import { renderSearchItemsAsync } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 
