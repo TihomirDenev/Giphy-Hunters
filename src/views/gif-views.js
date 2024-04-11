@@ -1,31 +1,36 @@
 import { renderFavoriteStatus } from '../events/favorites-events.js';
 
-export const toSingleGifView = (gif) => `
+export const toSingleGifView = (gif) => {
+    if (gif.title === '') gif.title = 'Missing title for this gif';
+    return `
 <div id="gif">
     <h1>${gif.title}</h1>
     <div class="content">
     ${toGifDetailed(gif)}
     </div>
-</div>
-`;
+</div>`
+};
 
 export const toGifSimple = (gif) => `
 <div class="gif">
-    <img src="${gif}" alt="missing image"><br>
+    <img src="${gif.images.original.url}" alt="missing image"><br>
+    <div class="button-container">
     <button class="view-gif-btn" data-gif-id="${gif.id}">View Gif details</button>
     ${renderFavoriteStatus(gif.id)}
+    </div>
 </div>
 `;
 
-const toGifDetailed = (gif) => `
+export const toGifDetailed = (gif) => `
 <div class="gif-detailed">
-    <div class="poster">
-    <img src="${gif}">
+    <div class="gif-gif">
+    <img src="${gif.images.original.url}">
     </div>
     <div class="gif-info">
-    <p>Type: ${gif.type}</p>
-    <p>Username: ${gif.username}</p>
-    <p>Import Data: ${gif.import_datetime}</p>
+    <h2>Type: ${gif.type}</h2><br>
+    <h2>Username: ${gif.username}</h2><br>
+    <h2>Upload Data: ${gif.import_datetime}</h2><br>
+    <h2>Go Back Button: ${`<button class="nav-link" data-page="trending-gifs" id="Back" >Back</button>`}</h2>
     </div>
 </div>
 `;
