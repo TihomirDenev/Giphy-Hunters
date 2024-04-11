@@ -1,7 +1,8 @@
 import {
   getGifs,
   getGifsById,
-  getGifsDetailedInfo
+  getGifsDetailedInfo,
+  getTrendyGif,
 } from '../data/fetch-gifs.js';
 
 // request for getting the gif and return it
@@ -20,4 +21,11 @@ export const loadGifsById = (id = null) => {
 export const loadGifDetail = (id = null) => {
   const gif = getGifsDetailedInfo(id);
   return gif;
+};
+
+// request for getting trendy gifs and return them
+
+export const loadTrendyGif = async () => {
+  const trendyGifs = getTrendyGif();
+  return trendyGifs;
 };

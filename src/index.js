@@ -2,6 +2,7 @@ import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
 import { loadPage } from './events/navigation-events.js';
 import { renderSearchItems } from './events/search-events.js';
+import { toggleFavoriteStatus } from './events/favorites-events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
@@ -18,13 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     +(event.target.getAttribute(/* your correct data attribute here */))
     //   );
     // }
-
-    // toggle favorite event
-    // TODO
-    // if (event.target.classList.contains(/* favorites item class here */)) {
-    //   toggleFavoriteStatus(
-    //     +(event.target.getAttribute(/* your correct data attribute here */))
-    //   );
+    // if (event.target.classList.contains('favorite')) {
+    //   toggleFavoriteStatus(+event.target.getAttribute('data-movie-id'));
     // }
   });
 
