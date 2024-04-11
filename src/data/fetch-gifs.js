@@ -8,9 +8,8 @@ export const getGifs = async () => {
     `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
   );
   const data = await randomGif.json();
-  const image = data.data.images.fixed_height.url;
-  console.log(`Random GIF data: ${image}`);
-  return image;
+  const imageData = data.data;
+  return imageData;
 };
 
 // TODO
@@ -29,9 +28,7 @@ export const searchGifs = (searchTerm = '') => {
 };
 
 export const getTrendyGif = async () => {
-  const data = await fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`
-  );
+  const data = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`);
 
   const getTrendyGif = await data.json();
   return getTrendyGif;
