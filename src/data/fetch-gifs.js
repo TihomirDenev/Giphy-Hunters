@@ -4,9 +4,7 @@ import { API_KEY } from '../common/constants.js';
 
 // TODO
 export const getGifs = async () => {
-  const randomGif = await fetch(
-    `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
-  );
+  const randomGif = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`);
   const data = await randomGif.json();
   const imageData = data.data;
   return imageData;
@@ -18,8 +16,10 @@ export const getGifsById = (gifId = null) => {
 };
 
 //TODO
-export const getGifsDetailedInfo = (gidId = null) => {
-  // fetch gifs`s info
+export const getGifsDetailedInfo = async (gifId = null) => {
+  const gifByID = await fetch(`https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`);
+  const data = await gifByID.json();
+  return data.data;
 };
 
 //TODO
