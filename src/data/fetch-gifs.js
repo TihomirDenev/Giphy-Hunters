@@ -2,8 +2,7 @@
 
 import { API_KEY } from '../common/constants.js';
 
-// TODO
-export const getGifs = async () => {
+export const getGifsAsync = async () => {
   const randomGif = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`);
   const data = await randomGif.json();
   const imageData = data.data;
@@ -15,8 +14,7 @@ export const getGifsById = (gifId = null) => {
   // fetch by id
 };
 
-//TODO
-export const getGifsDetailedInfo = async (gifId = null) => {
+export const getGifsDetailedInfoAsync = async (gifId = null) => {
   const gifByID = await fetch(`https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`);
   const data = await gifByID.json();
   return data.data;
@@ -28,7 +26,7 @@ export const searchGifsAsync = async (searchTerm = '') => {
   return dataJson.data;
 };
 
-export const getTrendyGif = async () => {
+export const getTrendyGifAsync = async () => {
   const data = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`);
 
   const getTrendyGif = await data.json();
