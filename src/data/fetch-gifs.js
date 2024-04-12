@@ -41,19 +41,17 @@ export const getTrendyGifAsync = async () => {
   return getTrendyGif;
 };
 
-export const postGifAsync = async (bodyUrl) => {
+export const postGifAsync = async (file) => {
   console.log('POST GIF ASYNC');
 
-  const bodyData = {
-    source_image_url: bodyUrl,
-  };
+  const formData = new FormData();
+  formData.append('file', file);
 
   const data = await fetch(
     `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`,
     {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(bodyData),
+      body: formData,
     }
   );
   const response = await data.json();
