@@ -1,4 +1,10 @@
-import { getGifsAsync, getGifsById, getGifsDetailedInfoAsync, getTrendyGifAsync, } from '../data/fetch-gifs.js';
+import {
+  getGifsAsync,
+  getGifsById,
+  getGifsDetailedInfoAsync,
+  getTrendyGifAsync,
+  postGifAsync,
+} from '../data/fetch-gifs.js';
 
 // request for getting the gif and return it
 export const loadGifsAsync = async () => {
@@ -23,4 +29,10 @@ export const loadGifDetailAsync = async (id = null) => {
 export const loadTrendyGifAsync = async () => {
   const trendyGifs = await getTrendyGifAsync();
   return trendyGifs;
+};
+
+export const uploadGifAsync = async (url) => {
+  console.log('Upload Gif Async Log');
+  const uploadedGif = await postGifAsync(url);
+  return uploadedGif;
 };
