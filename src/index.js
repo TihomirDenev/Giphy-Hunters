@@ -26,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Upload
     if (event.target.classList.contains('upload')) {
-      const uploadLink = event.target.getAttribute('data-url');
-      uploadGifAsync(uploadLink);
+      const uploadForm = document.getElementById('uploadForm');
+      console.log(uploadForm);
+      uploadForm.addEventListener('submit', handleFormSubmit);
     }
   });
 
@@ -38,3 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadPage(HOME);
 });
+
+async function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert('Please select a file.');
+    return;
+  }
+  console.log(file);
+  await uploadGifAsync(file);
+}
