@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Upload
     if (event.target.classList.contains('upload')) {
       const uploadForm = document.getElementById('uploadForm');
-      console.log(uploadForm);
       uploadForm.addEventListener('submit', handleFormSubmit);
     }
   });
@@ -50,6 +49,5 @@ async function handleFormSubmit(event) {
     alert('Please select a file.');
     return;
   }
-  console.log(file);
   await uploadGifAsync(file);
 }
