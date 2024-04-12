@@ -1,8 +1,9 @@
 import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
-import { loadPage, renderGifDetailsAsync} from './events/navigation-events.js';
+import { loadPage, renderGifDetailsAsync } from './events/navigation-events.js';
 import { renderSearchItemsAsync } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
+import { uploadGifAsync } from './requests/request-service.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
@@ -15,13 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // show gifs events
     // TODO
     if (event.target.classList.contains('view-gif-btn')) {
-      renderGifDetailsAsync((event.target.getAttribute('data-gif-id')));
+      renderGifDetailsAsync(event.target.getAttribute('data-gif-id'));
     }
 
     // favorite button click event
     if (event.target.classList.contains('favorite')) {
       const gifId = event.target.getAttribute('data-gif-id');
       toggleFavoriteStatus(gifId);
+    }
+    // Upload
+    if (event.target.classList.contains('upload')) {
+      const uploadLink = event.target.getAttribute('data-url');
+      uploadGifAsync(uploadLink);
     }
   });
 
