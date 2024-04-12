@@ -1,5 +1,5 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF, } from '../common/constants.js';
-import { loadGifDetail, loadGifs, loadTrendyGifAsync } from '../requests/request-service.js';
+import { loadGifDetailAsync, loadGifsAsync, loadTrendyGifAsync } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toSingleGifView } from '../views/gif-views.js';
@@ -14,11 +14,11 @@ export const loadPage = (page = '') => {
   switch (page) {
     case HOME:
       setActiveNav(HOME);
-      return renderHome();
+      return renderHomeAsync();
 
     case TRENDING_GIFS:
       setActiveNav(TRENDING_GIFS);
-      return renderTrending();
+      return renderTrendingAsync();
 
     case FAVORITES:
       setActiveNav(FAVORITES);
@@ -42,17 +42,17 @@ export const loadPage = (page = '') => {
   }
 };
 
-export const renderGifDetails = async (id = null) => {
-  const gif = await loadGifDetail(id);
+export const renderGifDetailsAsync = async (id = null) => {
+  const gif = await loadGifDetailAsync(id);
   q(CONTAINER_SELECTOR).innerHTML = toSingleGifView(gif);
 };
 
-const renderHome = async () => {
-  //const imageData = await loadGifs();
-  q(CONTAINER_SELECTOR).innerHTML = toHomeView();
+const renderHomeAsync = async () => {
+  const imageData = await loadGifsAsync();
+  q(CONTAINER_SELECTOR).innerHTML = toHomeView(imageData);
 };
 
-const renderTrending = async () => {
+const renderTrendingAsync = async () => {
   const gif = await loadTrendyGifAsync();
   q(CONTAINER_SELECTOR).innerHTML = toTrendingView(gif);
 };
