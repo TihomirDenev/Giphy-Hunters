@@ -1,6 +1,6 @@
 import { HOME } from './common/constants.js';
 import { q } from './events/helpers.js';
-import { loadPage, renderGifDetails} from './events/navigation-events.js';
+import { loadPage, renderGifDetailsAsync} from './events/navigation-events.js';
 import { renderSearchItemsAsync } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // show gifs events
     // TODO
     if (event.target.classList.contains('view-gif-btn')) {
-      renderGifDetails((event.target.getAttribute('data-gif-id')));
+      renderGifDetailsAsync((event.target.getAttribute('data-gif-id')));
     }
 
     // favorite button click event
