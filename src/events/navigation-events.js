@@ -1,5 +1,17 @@
-import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF, } from '../common/constants.js';
-import { loadGifDetailAsync, loadGifsAsync, loadTrendyGifAsync } from '../requests/request-service.js';
+import {
+  ABOUT,
+  CONTAINER_SELECTOR,
+  FAVORITES,
+  HOME,
+  TRENDING_GIFS,
+  UPLOADED_GIFS,
+  UPLOAD_GIF,
+} from '../common/constants.js';
+import {
+  loadGifDetailAsync,
+  loadGifsAsync,
+  loadTrendyGifAsync,
+} from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toSingleGifView } from '../views/gif-views.js';
