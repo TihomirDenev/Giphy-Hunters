@@ -260,3 +260,10 @@ footer {
 .favorite {
   margin-left: 15px; /* Add margin between the buttons */
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
