@@ -1,4 +1,7 @@
+import { HOME } from '../common/constants.js';
 import { renderFavoriteStatus } from '../events/favorites-events.js';
+
+let previousPage = HOME;
 
 export const toSingleGifView = (gif) => {
     if (gif.title === '') gif.title = 'Missing title for this gif';
@@ -11,15 +14,17 @@ export const toSingleGifView = (gif) => {
 </div>`
 };
 
-export const toGifSimple = (gif) => `
+export const toGifSimple = (gif, prevPage = HOME) => {
+    previousPage = prevPage;
+    return `
 <div class="gif">
     <img src="${gif.images.original.url}" alt="missing image"><br>
     <div class="button-container">
     <button class="view-gif-btn" data-gif-id="${gif.id}">View Gif details</button>
     ${renderFavoriteStatus(gif.id)}
     </div>
-</div>
-`;
+</div>`;
+}
 
 export const toGifDetailed = (gif) => `
 <div class="gif-detailed">
@@ -30,7 +35,7 @@ export const toGifDetailed = (gif) => `
     <h2>Type: ${gif.type}</h2><br>
     <h2>Username: ${gif.username}</h2><br>
     <h2>Upload Data: ${gif.import_datetime}</h2><br>
-    <h2>Go Back Button: ${`<button class="nav-link" data-page="trending-gifs" id="Back" >Back</button>`}</h2>
+    <h2>Go Back Button: ${`<button class="nav-link" data-page="${previousPage}" id="Back" >Back</button>`}</h2>
     </div>
 </div>
 `;
