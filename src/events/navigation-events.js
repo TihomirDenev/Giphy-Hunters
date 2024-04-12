@@ -11,6 +11,7 @@ import {
   loadGifDetailAsync,
   loadGifsAsync,
   loadTrendyGifAsync,
+  loadUploadedGifs,
 } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
@@ -77,8 +78,9 @@ const renderUploadGif = () => {
   q(CONTAINER_SELECTOR).innerHTML = toUploadGifView();
 };
 
-const renderUploadedGifs = () => {
-  q(CONTAINER_SELECTOR).innerHTML = toUploadedGifsView();
+const renderUploadedGifs = async () => {
+  const files = await loadUploadedGifs();
+  q(CONTAINER_SELECTOR).innerHTML = toUploadedGifsView(files);
 };
 
 const renderAbout = () => {
