@@ -1,6 +1,7 @@
 // public API
 
 import { API_KEY } from '../common/constants.js';
+import { addUploaded } from './uploaded.js';
 
 export const getGifsAsync = async () => {
   const randomGif = await fetch(
@@ -11,9 +12,12 @@ export const getGifsAsync = async () => {
   return imageData;
 };
 
-// TODO
-export const getGifsById = (gifId = null) => {
-  // fetch by id
+export const getGifsByIdAsync = async (gifId = null) => {
+  const gifByID = await fetch(
+    `https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`
+  );
+  const data = await gifByID.json();
+  return data.data;
 };
 
 export const getGifsDetailedInfoAsync = async (gifId = null) => {
@@ -42,8 +46,6 @@ export const getTrendyGifAsync = async () => {
 };
 
 export const postGifAsync = async (file) => {
-  console.log('POST GIF ASYNC');
-
   const formData = new FormData();
   formData.append('file', file);
 
@@ -55,5 +57,5 @@ export const postGifAsync = async (file) => {
     }
   );
   const response = await data.json();
-  console.log(response);
+  addUploaded(response.data.id);
 };
