@@ -128,31 +128,25 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Style for the GIF image */
-.content .gif-container img {
-  width: 200px;
-  /* Adjust as needed */
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 
 /*SINGLE GIF LOOK*/
 .gif {
-  border: 3px solid #918a8a; /* Adjust border thickness */
-  padding: 10px; /* Add some padding for better spacing */
-  text-align: center; /* Center align the content */
-  /* Background color for the border */
-  background-color: rgba(125, 118, 118,0.5);
+  border: 3px solid #918a8a;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(125, 118, 118, 0.5);
   backdrop-filter: blur(2px);
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange items vertically */
 }
 
 .gif img {
-  max-width: 100%; /* Ensure the image does not exceed the container width */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Make the image behave like a block element */
-  margin: 0 auto 10px; /* Center the image horizontally and add space below */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 
@@ -263,8 +257,7 @@ footer {
 .button-container {
   text-align: center;
   padding: 5px 0;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center the buttons horizontally */
+  margin-top: auto;
 }
 
 .favorite {
