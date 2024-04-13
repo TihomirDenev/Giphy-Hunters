@@ -1,37 +1,55 @@
-/*STYLE FOR MAIN PAGE LOOK*/
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li,
-header,
-footer {
-  margin: 0;
+/* Styling body */
+*{
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* Setting default font family */
-body {
-  font-family: "Roboto", sans-serif;
+body{
+  background-image: url("background1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: Verdana, Arial, system-ui, sans-serif;
+  font-size: 21px;
+  font-family: 'Courier New', Courier, monospace;
+  background-size:cover;
 }
 
-/* Styling header */
-header {
-  background-color: #f06d06;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+body,html{
+height: 100%;
 }
+
 
 /* Styling navigation */
-nav {
-  background-color: #333;
-  padding: 10px 0;
-  text-align: center;
+
+.header nav{
+  display: flex;
+  gap: 10px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(125, 118, 118,0.5);
+  backdrop-filter: blur(2px);
+}
+
+.nav-link::after{
+  content: "";
   width: 100%;
-  margin: 0;
+  height: 2px;
+  display: block;
+  background-color: rgb(226, 215, 215);
+  border-radius: 60px;
+  transform: scaleX(0);
+  transition: transform 0.7s 0.5s;
+  transform-origin: left;
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1);
 }
 
 .nav-link {
@@ -39,8 +57,8 @@ nav {
   color: #fff;
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
-  /* Adjust padding as needed */
+  padding: 15px 10px;
+
 }
 
 #search {
@@ -61,16 +79,20 @@ nav {
   justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
+  
 }
 
 /* Styling footer */
 footer {
-  background-color: #f06d06;
   color: #fff;
   padding: 10px 0;
   text-align: center;
+  background-color: rgba(125, 118, 118,0.5);
+  backdrop-filter: blur(2px);
+  margin-bottom: 80px;
 }
 
+/* Styling favorite button*/
 .active {
   color: #dc5b52;
 }
@@ -79,33 +101,23 @@ footer {
   color: #d90536b9;
   font-size: 20px;
   cursor: pointer;
-  /* Change cursor to pointer when hovering */
 }
 
 
-
+ 
 /*STYLE FOR TRENDING PAGE*/
 /* Style for the main container */
 #Trendy {
   max-width: 800px;
-  /* Adjust as needed */
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  /* Center text */
 }
 
 /* Style for the heading */
 #Trendy h1 {
   font-size: 32px;
-  color: #333;
-}
-
-/* Style for the paragraph */
-#Trendy p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+  color: #dbd4d4;
 }
 
 /* Style for the GIF container */
@@ -130,7 +142,9 @@ footer {
   border: 3px solid #918a8a; /* Adjust border thickness */
   padding: 10px; /* Add some padding for better spacing */
   text-align: center; /* Center align the content */
-  background-color: #e5eaed; /* Background color for the border */
+  /* Background color for the border */
+  background-color: rgba(125, 118, 118,0.5);
+  backdrop-filter: blur(2px);
 }
 
 .gif img {
