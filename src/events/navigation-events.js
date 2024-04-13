@@ -1,5 +1,5 @@
 import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF, } from '../common/constants.js';
-import { loadFavoriteGifs, loadGifDetailAsync, loadGifsAsync, loadTrendyGifAsync, loadUploadedGifs, } from '../requests/request-service.js';
+import { loadFavoriteGifsAsync, loadGifDetailAsync, loadGifsAsync, loadTrendyGifAsync, loadUploadedGifsAsync, } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toSingleGifView } from '../views/gif-views.js';
@@ -58,7 +58,7 @@ const renderTrendingAsync = async () => {
 };
 
 const renderFavorites = async () => {
-  const favorites = await loadFavoriteGifs()
+  const favorites = await loadFavoriteGifsAsync()
   q(CONTAINER_SELECTOR).innerHTML = toFavoritesView((favorites));
 };
 
@@ -67,7 +67,7 @@ const renderUploadGif = () => {
 };
 
 const renderUploadedGifs = async () => {
-  const files = await loadUploadedGifs();
+  const files = await loadUploadedGifsAsync();
   q(CONTAINER_SELECTOR).innerHTML = toUploadedGifsView(files);
 };
 
