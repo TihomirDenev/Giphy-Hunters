@@ -49,5 +49,6 @@ async function handleFormSubmit(event) {
     alert('Please select a file.');
     return;
   }
+  alert('File has been uploaded!');
   await uploadGifAsync(file);
 }
