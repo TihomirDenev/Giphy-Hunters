@@ -1,9 +1,5 @@
 import { EMPTY_HEART, FULL_HEART } from '../common/constants.js';
-import {
-  addFavorite,
-  getFavorites,
-  removeFavorite,
-} from '../data/favorites.js';
+import { addFavorite, getFavorites, removeFavorite,} from '../data/favorites.js';
 import { q } from './helpers.js';
 
 export const toggleFavoriteStatus = (gifId) => {

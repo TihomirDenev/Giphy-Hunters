@@ -1,18 +1,5 @@
-import {
-  ABOUT,
-  CONTAINER_SELECTOR,
-  FAVORITES,
-  HOME,
-  TRENDING_GIFS,
-  UPLOADED_GIFS,
-  UPLOAD_GIF,
-} from '../common/constants.js';
-import {
-  loadGifDetailAsync,
-  loadGifsAsync,
-  loadTrendyGifAsync,
-  loadUploadedGifs,
-} from '../requests/request-service.js';
+import { ABOUT, CONTAINER_SELECTOR, FAVORITES, HOME, TRENDING_GIFS, UPLOADED_GIFS, UPLOAD_GIF, } from '../common/constants.js';
+import { loadFavoriteGifsAsync, loadGifDetailAsync, loadGifsAsync, loadTrendyGifAsync, loadUploadedGifsAsync, } from '../requests/request-service.js';
 import { toAboutView } from '../views/about-view.js';
 import { toFavoritesView } from '../views/favorites-view.js';
 import { toSingleGifView } from '../views/gif-views.js';
@@ -70,8 +57,9 @@ const renderTrendingAsync = async () => {
   q(CONTAINER_SELECTOR).innerHTML = toTrendingView(gif);
 };
 
-const renderFavorites = () => {
-  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView();
+const renderFavorites = async () => {
+  const favorites = await loadFavoriteGifsAsync()
+  q(CONTAINER_SELECTOR).innerHTML = toFavoritesView((favorites));
 };
 
 const renderUploadGif = () => {
@@ -79,7 +67,7 @@ const renderUploadGif = () => {
 };
 
 const renderUploadedGifs = async () => {
-  const files = await loadUploadedGifs();
+  const files = await loadUploadedGifsAsync();
   q(CONTAINER_SELECTOR).innerHTML = toUploadedGifsView(files);
 };
 
