@@ -12,7 +12,9 @@ body{
   font-family: Verdana, Arial, system-ui, sans-serif;
   font-size: 21px;
   font-family: 'Courier New', Courier, monospace;
-  background-size:cover;
+  background-size: cover;
+  color: #dbd4d4;
+  text-align: center;
 }
 
 body,html{
@@ -107,17 +109,12 @@ footer {
  
 /*STYLE FOR TRENDING PAGE*/
 /* Style for the main container */
+
+
 #Trendy {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
-}
-
-/* Style for the heading */
-#Trendy h1 {
-  font-size: 32px;
-  color: #dbd4d4;
 }
 
 /* Style for the GIF container */
@@ -223,11 +220,6 @@ footer {
 /**/
 #Trendy {
   padding: 20px;
-}
-
-#Trendy h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
 }
 
 #Trendy h2 {
