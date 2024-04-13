@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // show gifs events
-    // TODO
     if (event.target.classList.contains('view-gif-btn')) {
       renderGifDetailsAsync(event.target.getAttribute('data-gif-id'));
     }
@@ -29,11 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const uploadForm = document.getElementById('uploadForm');
       uploadForm.addEventListener('submit', handleFormSubmit);
     }
+
+    // search on button press
+    if (event.target.classList.contains('search-btn')) {
+      const searchInput = event.target.previousElementSibling;
+      renderSearchItemsAsync(searchInput.value);
+    }
   });
 
   // search events
-  q('input#search').addEventListener('input', (event) => {
-    renderSearchItemsAsync(event.target.value);
+  q('input#search').addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+      renderSearchItemsAsync(event.target.value);
+    }
   });
 
   loadPage(HOME);
