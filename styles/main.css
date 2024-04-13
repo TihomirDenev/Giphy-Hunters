@@ -230,9 +230,9 @@ footer {
 
 /*TRENDING PAGE VIEW*/
 .gif-listing {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .gif {
@@ -285,13 +285,24 @@ footer {
 }
 
 .trending-gif-container img {
-  margin: 10px;
   border-radius: 5px;
+  height: 250px;
+  width: 650px;
   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 
 .trending-gif-container img:hover {
-  transform: scale(1.1); /* Increase size on hover */
+  transform: scale(1.2);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 2px solid #f0b506;
+}
+
+.button-container {
+  text-align: center;
+  padding: 5px 0;
+  margin-top: auto;
 }
 
 /* Styling for favorite icon */
@@ -304,12 +315,6 @@ footer {
 
 .favorite:hover {
   color: #d90536b9; /* Darker color on hover */
-}
-
-.button-container {
-  text-align: center;
-  padding: 5px 0;
-  margin-top: auto;
 }
 
 .favorite {
