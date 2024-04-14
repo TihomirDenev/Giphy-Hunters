@@ -20,7 +20,7 @@ export const toGifSimple = (gif, prevPage = HOME) => {
     <div class="gif trending-gif-container">
         <img src="${gif.images.original.url}" alt="missing image"><br>
         <div class="button-container">
-            <button type="button" class="view-gif-btn" data-gif-id="${gif.id}">View Gif details</button>
+            <button type="button" class="view-gif-btn button-golden" data-gif-id="${gif.id}">View Gif details</button>
             ${renderFavoriteStatus(gif.id)}
         </div>
     </div>`;
