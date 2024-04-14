@@ -262,6 +262,7 @@ footer div:nth-child(2) {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1rem;
+  margin-top: 50px;
 }
 
 .gif {
@@ -360,4 +361,5 @@ footer div:nth-child(2) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
