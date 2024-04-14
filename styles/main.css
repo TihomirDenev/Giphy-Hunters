@@ -34,6 +34,10 @@ ul {
   list-style-type: none;
 }
 
+ul li {
+  padding: 5px;
+}
+
 h2 {
   padding: 1rem;
 }
@@ -357,9 +361,22 @@ footer div:nth-child(2) {
   color: #f0b506;
 }
 
-.green-text {
+.golden-background {
+  background-color: rgba(240, 181, 6, 0.5);
+}
+
+.blue-background {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.red-background {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+.green-background {
   background-color: rgba(40, 167, 118, 0.5);
 }
+
 .favorite:hover {
   font-size: 2rem;
   color: #d90536b9; /* Darker color on hover */
