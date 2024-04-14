@@ -1,5 +1,5 @@
 import { getFavorites } from '../data/favorites.js';
-import { getGifsAsync, getGifsByIdAsync, getGifsDetailedInfoAsync, getTrendyGifAsync, postGifAsync } from '../data/fetch-gifs.js';
+import { getGifsAsync, getGifsByIdAsync, getTrendyGifAsync, postGifAsync } from '../data/fetch-gifs.js';
 import { getUploaded } from '../data/uploaded.js';
 
 // request for getting the gif and return it
@@ -16,12 +16,11 @@ export const loadGifsById = (id = null) => {
 
 // after view details button - the information for gif
 export const loadGifDetailAsync = async (id = null) => {
-  const gif = await getGifsDetailedInfoAsync(id);
+  const gif = await getGifsByIdAsync(id);
   return gif;
 };
 
 // request for getting trendy gifs and return them
-
 export const loadTrendyGifAsync = async () => {
   const trendyGifs = await getTrendyGifAsync();
   return trendyGifs;
@@ -36,7 +35,8 @@ export const loadUploadedGifsAsync = async () => {
   const gifsById = getUploaded();
   const gifs = [];
   for (let i = 0; i < gifsById.length; i++) {
-    gifs.push(await getGifsByIdAsync(gifsById[i]));
+    const gif = await getGifsByIdAsync(gifsById[i]);
+    gifs.push(gif);
   }
   return gifs;
 };
@@ -45,7 +45,8 @@ export const loadFavoriteGifsAsync = async () => {
   const gifsById = getFavorites();
   const gifs = [];
   for (let i = 0; i < gifsById.length; i++) {
-    gifs.push(await getGifsByIdAsync(gifsById[i]));
+    const gif = await getGifsByIdAsync(gifsById[i]);
+    gifs.push(gif);
   }
   return gifs;
 }
