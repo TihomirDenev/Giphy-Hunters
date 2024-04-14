@@ -389,3 +389,27 @@ footer div:nth-child(2) {
   align-items: center;
   margin-top: 50px;
 }
+
+.button-golden {
+  background-color: #f0b506;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+::-webkit-file-upload-button {
+  background-color: #f0b506;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
