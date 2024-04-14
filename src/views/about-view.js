@@ -3,8 +3,8 @@ export const toAboutView = () => `
   <div class="content">
     <h1>About the app</h1>
     <p>
-      This app is a simple web application that uses the Giphy API to display gifs. The app allows you to view gifs,
-      search for gifs, view details of a gif, and add gifs to your favorites. You can also upload your own gifs to the
+      This app is a simple web application that uses the <span class="golden-text">Giphy API</span> to display gifs. The app allows you to <span class="golden-text">view</span> gifs,
+      <span class="golden-text">search</span> for gifs, <span class="golden-text">view details</span> of a gif, and add gifs to your <span class="golden-text">favorites</span>. You can also <span class="golden-text">upload</span> your own gifs to the
       app.
     </p>
     <h2>Features</h2>
@@ -17,13 +17,13 @@ export const toAboutView = () => `
     </ul>
     <h2>Technologies</h2>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+      <li><span class="red-background">HTML5</span></li>
+      <li><span class="blue-background">CSS</span></li>
+      <li><span class="golden-background">JavaScript</span></li>
     </ul>
     <h2>API</h2>
     <p>
-      The app uses the Giphy API to fetch gifs. You can find more information about the Giphy API at
+      The app uses the <span class="golden-text">Giphy API</span> to fetch gifs. You can find more information about the <span class="golden-text">Giphy API</span> at
       <a class="nav-link" href="https://developers.giphy.com/docs/api#quick-start-guide" target="_blank">Giphy API</a>.
     </p>
 
