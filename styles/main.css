@@ -315,25 +315,29 @@ footer {
 }
 
 .button-container {
-  text-align: center;
-  padding: 5px 0;
-  margin-top: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
 /* Styling for favorite icon */
 .favorite {
-  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   color: #dc3545;
-  margin-top: 5px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
 .favorite:hover {
+  font-size: 2rem;
   color: #d90536b9; /* Darker color on hover */
-}
-
-.favorite {
-  margin-left: 15px; /* Add margin between the buttons */
 }
 
 .content {
