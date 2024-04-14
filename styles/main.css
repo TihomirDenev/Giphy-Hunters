@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -25,11 +30,13 @@ body {
   min-height: 100vh;
 }
 
-body,
-html {
-  height: 100%;
+ul {
+  list-style-type: none;
 }
 
+h2 {
+  padding: 1rem;
+}
 #app {
   display: flex;
   flex-direction: column;
@@ -169,31 +176,27 @@ header {
 /* Styling footer */
 footer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
   color: #fff;
-
   padding: 20px 80px;
-  margin-top: 20px;
-  margin-bottom: 80px;
-
   background-color: rgba(125, 118, 118, 0.5);
   backdrop-filter: blur(2px);
+  align-items: center;
+  margin: 20px 0px;
+  justify-content: space-between;
 }
 
-footer a {
-  color: #f0b506;
-  text-decoration: none;
+footer div {
+  width: 100%;
 }
 
 footer div:nth-child(2) {
+  display: flex;
   height: 100%;
   border: 2px solid #f0b506;
   border-top: none;
   border-bottom: none;
-  margin: 0 20px;
   padding: 20px;
+  align-items: center;
 }
 
 .favorite:hover {
