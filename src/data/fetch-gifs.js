@@ -28,18 +28,6 @@ export const getGifsByIdAsync = async (gifId = null) => {
   }
 };
 
-export const getGifsDetailedInfoAsync = async (gifId = null) => {
-  try {
-    const gifByID = await fetch(
-      `https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`
-    );
-    const data = await gifByID.json();
-    return data.data;
-  } catch (e) {
-    console.log(e.message);
-  }
-};
-
 export const searchGifsAsync = async (searchTerm = '') => {
   try {
     const response = await fetch(
