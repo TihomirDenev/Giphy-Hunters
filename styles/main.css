@@ -353,7 +353,13 @@ footer div:nth-child(2) {
   width: 40px;
   height: 40px;
 }
+.golden-text {
+  color: #f0b506;
+}
 
+.green-text {
+  background-color: rgba(40, 167, 118, 0.5);
+}
 .favorite:hover {
   font-size: 2rem;
   color: #d90536b9; /* Darker color on hover */
