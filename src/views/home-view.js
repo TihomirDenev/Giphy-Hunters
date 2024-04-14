@@ -6,7 +6,7 @@ export const toHomeView = (gifData) => `
 <div class="content">
     <p>Welcome to <span class="golden-text">Giphy Hunters</span>, the ultimate destination crafted by a dynamic trio of coding enthusiasts <br /><span class="golden-text">Tisho</span>, <span class="golden-text">Tanya</span>, and <span class="golden-text">Rado</span>.</p>
     <br />
-    <p>As students at <span class="green-text">Telerik Academy Alpha</span>, we've harnessed the power of <span class="golden-text">JavaScript</span> to bring you a seamless gif-fetching experience that's as entertaining as it is efficient.</p>
+    <p>As students at <span class="green-background">Telerik Academy Alpha</span>, we've harnessed the power of <span class="golden-text">JavaScript</span> to bring you a seamless gif-fetching experience that's as entertaining as it is efficient.</p>
     <br />
     <p>Dive into a world where the top 50 trending gifs come alive, curated just for you.</p>
     <br />
