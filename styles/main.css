@@ -166,14 +166,31 @@ header {
 
 /* Styling footer */
 footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   color: #fff;
 
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(125, 118, 118, 0.5);
-  backdrop-filter: blur(2px);
+  padding: 20px 80px;
   margin-top: 20px;
   margin-bottom: 80px;
+
+  background-color: rgba(125, 118, 118, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+footer a {
+  color: #f0b506;
+}
+
+footer div:nth-child(2) {
+  height: 100%;
+  border: 2px solid #f0b506;
+  border-top: none;
+  border-bottom: none;
+  margin: 0 20px;
+  padding: 20px;
 }
 
 /* Styling favorite button*/
