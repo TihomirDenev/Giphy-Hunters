@@ -398,6 +398,15 @@ footer div:nth-child(2) {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.upload {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+}
+
 ::-webkit-file-upload-button {
   background-color: #f0b506;
   color: #fff;
@@ -409,7 +418,12 @@ footer div:nth-child(2) {
 
 input[type="file"] {
   color: #fff;
+  border: 2px solid #f0b506;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  background-image: url("/src/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
