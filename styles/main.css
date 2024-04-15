@@ -239,22 +239,22 @@ footer div:nth-child(2) {
 
 .view-gif-btn {
   display: inline-block;
-  background-color: #007bff;
+  background-color: #f0b506;
   color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
 }
 
 .nav-link#Back {
   display: inline-block;
-  background-color: #007bff;
+  background-color: #f0b506;
   color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -263,7 +263,6 @@ footer div:nth-child(2) {
 .gif-listing {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 1rem;
   margin-top: 50px;
 }
 
@@ -313,6 +312,8 @@ footer div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 350px;
+  margin: 5px;
 }
 
 .trending-gif-container img {
@@ -419,4 +420,17 @@ input[type="file"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/*THEME_BUTTON*/
+/* <button id="change-theme" type="button" class="theme-btn">⚙</button> */
+
+.theme-btn {
+  margin-left: 5px;
+  padding: 0px 7px;
+  background-color: rgba(240, 109, 6, 0.3);
+  border: 2px solid rgba(240, 109, 6, 0.3);
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 25px;
 }
