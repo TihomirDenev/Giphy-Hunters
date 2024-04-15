@@ -29,19 +29,31 @@ export const toAboutView = () => `
 
     <h2>Author</h2>
     <p>
-      This app was created by  <br />
-      <a class="nav-link" href="mailto:radoslav.marinov.a58@learn.telerikacademy.com"
-      >Tihomir Denev @ Telerik Academy 
-    </a> 
+      This app was created by  
+      <br />
+      <a
+          class="nav-link"
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/TihomirDenev"
+          >Tihomir Denev
+        </a>
     <br />
-    <a class="nav-link" href="mailto:jechevatanq@learn.telerikacademy.com">
-      Tanya Zhecheva @ Telerik Academy 
-    </a> 
+    <a 
+          class="nav-link" 
+          rel="noopener"
+          target="_blank" 
+          href="https://github.com/TanyaZhecheva"
+          >Tanya Zhecheva
+        </a>
     <br />
-    </a>
-    <a class="nav-link" href="mailto:radoslav.marinov.a58@learn.telerikacademy.com"
-      >Radoslav Marinov @ Telerik Academy
-    </a>
+    <a
+          class="nav-link"
+          rel="noopener"
+          target="_blank"
+          href="https://github.com/Radoslav-Marinovv"
+          >Radoslav Marinov
+        </a>
     </p>
   </div>
 </div>
