@@ -1,12 +1,11 @@
 // public API
-
-import { API_KEY } from '../common/constants.js';
+import { API_KEY, GET_GIPHY_URL, UPLOAD_GIPHY_URL } from '../common/constants.js';
 import { addUploaded } from './uploaded.js';
 
 export const getGifsAsync = async () => {
   try {
     const randomGif = await fetch(
-      `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`
+      `${GET_GIPHY_URL}random?api_key=${API_KEY}`
     );
     const data = await randomGif.json();
     const imageData = data.data;
@@ -19,7 +18,7 @@ export const getGifsAsync = async () => {
 export const getGifsByIdAsync = async (gifId = null) => {
   try {
     const gifByID = await fetch(
-      `https://api.giphy.com/v1/gifs/${gifId}?api_key=${API_KEY}`
+      `${GET_GIPHY_URL}${gifId}?api_key=${API_KEY}`
     );
     const data = await gifByID.json();
     return data.data;
@@ -31,7 +30,7 @@ export const getGifsByIdAsync = async (gifId = null) => {
 export const searchGifsAsync = async (searchTerm = '') => {
   try {
     const response = await fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchTerm}`
+      `${GET_GIPHY_URL}search?api_key=${API_KEY}&q=${searchTerm}`
     );
     const dataJson = await response.json();
     return dataJson.data;
@@ -43,7 +42,7 @@ export const searchGifsAsync = async (searchTerm = '') => {
 export const getTrendyGifAsync = async () => {
   try {
     const data = await fetch(
-      `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`
+      `${GET_GIPHY_URL}trending?api_key=${API_KEY}`
     );
     const getTrendyGif = await data.json();
     return getTrendyGif;
@@ -58,7 +57,7 @@ export const postGifAsync = async (file) => {
     formData.append('file', file);
 
     const data = await fetch(
-      `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`,
+      `${UPLOAD_GIPHY_URL}?api_key=${API_KEY}`,
       {
         method: 'POST',
         body: formData,
