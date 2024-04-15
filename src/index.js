@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const searchInput = event.target.previousElementSibling;
       renderSearchItemsAsync(searchInput.value);
     }
-  });
 
-  // search events
-  q('input#search').addEventListener('keyup', (event) => {
-    if (event.key === 'Enter') {
-      renderSearchItemsAsync(event.target.value);
-    }
+      // search on key (enter) press
+    q('input#search').addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        renderSearchItemsAsync(event.target.value);
+      }
+    });
   });
 
   loadPage(HOME);
@@ -56,6 +56,7 @@ async function handleFormSubmit(event) {
     alert('Please select a file.');
     return;
   }
-  alert('File has been uploaded!');
+  alert('Please wait gif to be uploaded')
   await uploadGifAsync(file);
+  alert('File has been uploaded!');
 }
