@@ -35,7 +35,7 @@ export const toGifDetailed = (gif) => `
         <h2>Type: ${gif.type}</h2><br>
         <h2>Username: ${gif.username}</h2><br>
         <h2>Upload Data: ${gif.import_datetime}</h2><br>
-        <h2>Go Back Button: ${`<button class="nav-link" data-page="${previousPage}" id="Back" >Back</button>`}</h2>
+        <button class="nav-link" data-page="${previousPage}" id="Back" >Back</button>
     </div>
 </div>
 `;
