@@ -313,7 +313,7 @@ footer div:nth-child(2) {
   flex-wrap: wrap;
   justify-content: center;
   width: 350px;
-  margin: 5px;
+  margin: 10px;
 }
 
 .trending-gif-container img {
