@@ -60,13 +60,13 @@ h2 {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(20deg) scale(1.2); /* Rotate to the right */
+    transform: rotate(20deg) scale(1.2);
   }
   50% {
-    transform: rotate(-20deg) scale(1.2); /* Rotate to the left */
+    transform: rotate(-20deg) scale(1.2);
   }
   75% {
-    transform: rotate(20deg) scale(1.2); /* Rotate to the right */
+    transform: rotate(20deg) scale(1.2);
   }
   100% {
     transform: rotate(0deg);
@@ -161,19 +161,14 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20px;
   padding: 20px;
 
   background-color: rgba(125, 118, 118, 0.5);
-
   backdrop-filter: blur(2px);
-
   border-radius: 10px;
-
-  margin: 20px;
-
   max-width: 60%;
   margin: 0 auto;
-
   margin-top: 20px;
 }
 
@@ -231,8 +226,8 @@ footer div:nth-child(2) {
   text-align: center;
   background-color: rgba(125, 118, 118, 0.5);
   backdrop-filter: blur(2px);
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Arrange items vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 .gif img {
@@ -243,25 +238,25 @@ footer div:nth-child(2) {
 }
 
 .view-gif-btn {
-  display: inline-block; /* Make the button inline with the image */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove button border */
-  padding: 8px 16px; /* Add padding to the button */
-  border-radius: 4px; /* Add border radius to the button */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  margin-right: 10px; /* Add margin to separate button from favorite status */
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .nav-link#Back {
-  display: inline-block; /* Make the button inline with the image */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
-  border: none; /* Remove button border */
-  padding: 8px 16px; /* Add padding to the button */
-  border-radius: 4px; /* Add border radius to the button */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  margin-right: 10px; /* Add margin to separate button from favorite status */
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 /*TRENDING PAGE VIEW*/
@@ -273,21 +268,21 @@ footer div:nth-child(2) {
 }
 
 .gif {
-  flex-basis: calc(36.33% - 20px); /* Adjust this value as needed for spacing */
-  margin-bottom: 20px; /* Adjust this value as needed for spacing */
+  flex-basis: calc(36.33% - 20px);
+  margin-bottom: 20px;
 }
 
 /* GIF DETAILED LOOK */
 .gif-detailed {
-  display: flex; /* Use flexbox for layout */
-  margin-top: 30px; /* Increased bottom margin for more space */
+  display: flex;
+  margin-top: 30px;
 }
 
 .gif-info {
   flex: 4;
   margin-top: 12px;
   margin-left: 48px;
-  text-align: left; /* Center align text */
+  text-align: left;
 }
 
 .viewDetails {
@@ -305,7 +300,6 @@ footer div:nth-child(2) {
   background-color: #0056b3;
 }
 
-/**/
 #Trendy {
   padding: 20px;
 }
@@ -325,7 +319,7 @@ footer div:nth-child(2) {
   border-radius: 5px;
   height: 250px;
   width: 650px;
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 .trending-gif-container img:hover {
@@ -333,7 +327,6 @@ footer div:nth-child(2) {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   border: 2px solid #f0b506;
-
   transform: scale(1.2);
 }
 
@@ -379,7 +372,7 @@ footer div:nth-child(2) {
 
 .favorite:hover {
   font-size: 2rem;
-  color: #d90536b9; /* Darker color on hover */
+  color: #d90536b9;
 }
 
 .content {
