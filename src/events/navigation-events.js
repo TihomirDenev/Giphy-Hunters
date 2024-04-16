@@ -7,6 +7,7 @@ import { toHomeView } from '../views/home-view.js';
 import { toTrendingView } from '../views/trending-view.js';
 import { toUploadGifView } from '../views/upload-gif-view.js';
 import { toUploadedGifsView } from '../views/uploaded-gifs-view.js';
+import { toVideoView } from '../views/video-view.js';
 import { q, setActiveNav } from './helpers.js';
 
 // public API
@@ -74,3 +75,8 @@ const renderUploadedGifs = async () => {
 const renderAbout = () => {
   q(CONTAINER_SELECTOR).innerHTML = toAboutView();
 };
+
+export const renderVideoView = () => {
+  setActiveNav();
+  q(CONTAINER_SELECTOR).innerHTML = toVideoView();
+} 
