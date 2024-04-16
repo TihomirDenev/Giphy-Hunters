@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // settings bar
   q('#dark-theme').addEventListener('click', () => {
     document.body.classList.add('dark-mode');
   });
