@@ -28,8 +28,15 @@
           </div>
           <div id="search-div">
             <input id="search" type="text" placeholder="Search" />
-            <button id="search-btn" type="submit" class="search-btn">🔍</button>
-            <button id="change-theme" type="button" class="theme-btn">⚙</button>
+            <button id="search-btn" type="submit" class="search-btn" title="Search">🔍</button>
+
+            <div class="dropdown">
+              <button id="change-theme" type="button" class="theme-btn" title="Settings">⚙</button>
+              <div class="dropdown-content">
+                <a href="#" id="dark=theme">Dark Theme</a>
+                <a href="#" id="light-theme">Light Theme</a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

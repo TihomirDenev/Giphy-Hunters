@@ -434,3 +434,41 @@ input[type="file"] {
   cursor: pointer;
   font-size: 25px;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(240, 109, 6, 0.3);
+  border: 2px solid rgba(240, 109, 6, 0.3);
+  border-radius: 7px;
+  cursor: pointer;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  right: 0; /* Position the dropdown content to the left */
+  top: calc(100% + 1px);
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+  color: #edd6d6;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: double;
+}
+
+/* Style the dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(240, 109, 6, 0.3);
+}
+
+/* Show the dropdown content when the button is hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
