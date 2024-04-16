@@ -2,6 +2,10 @@
 import { API_KEY, GET_GIPHY_URL, LOAD_N_GIFS, UPLOAD_GIPHY_URL } from '../common/constants.js';
 import { addUploaded } from './uploaded.js';
 
+/**
+ * Fetches a random GIF from the GIPHY API.
+ * @returns {Promise<Object>} The fetched GIF data.
+ */
 export const getGifsAsync = async () => {
   try {
     const randomGif = await fetch(
@@ -21,6 +25,11 @@ export const getGifsAsync = async () => {
   }
 };
 
+/**
+ * Fetches a GIF by its ID from the Giphy API.
+ * @param {string|null} gifId - The ID of the GIF to fetch. If null, fetches a random GIF.
+ * @returns {Promise<Object>} - A promise that resolves to the fetched GIF data.
+ */
 export const getGifsByIdAsync = async (gifId = null) => {
   try {
     const gifByID = await fetch(
@@ -39,6 +48,12 @@ export const getGifsByIdAsync = async (gifId = null) => {
   }
 };
 
+/**
+ * Fetches GIFs from the GIPHY API based on the provided search term.
+ *
+ * @param {string} [searchTerm=''] - The search term to use for fetching GIFs.
+ * @returns {Promise<Array>} - A promise that resolves to an array of GIF data.
+ */
 export const searchGifsAsync = async (searchTerm = '') => {
   try {
     const response = await fetch(
@@ -57,6 +72,11 @@ export const searchGifsAsync = async (searchTerm = '') => {
   }
 };
 
+/**
+ * Fetches trendy gifs from the Giphy API.
+ * @param {number} offSet - The offset value for pagination.
+ * @returns {Promise<Object>} - A promise that resolves to the fetched trendy gifs.
+ */
 export const getTrendyGifAsync = async (offSet = 0) => {
   try {
     const data = await fetch(
@@ -75,6 +95,11 @@ export const getTrendyGifAsync = async (offSet = 0) => {
   }
 };
 
+/**
+ * Uploads a GIF file to the GIPHY API.
+ * @param {File} file - The GIF file to be uploaded.
+ * @returns {Promise<void>} - A promise that resolves when the GIF is successfully uploaded.
+ */
 export const postGifAsync = async (file) => {
   try {
     const formData = new FormData();
