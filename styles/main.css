@@ -168,11 +168,26 @@ header {
   align-items: center;
 }
 
+.dark-mode #search {
+  padding: 8px;
+  margin-right: 0;
+  border-radius: 5px 0px 0px 5px;
+  border: 2px solid rgba(22, 228, 255, 0.721);
+}
+
 #search {
   padding: 8px;
   margin-right: 0;
   border-radius: 5px 0px 0px 5px;
   border: 2px solid rgba(240, 109, 6, 0.3);
+}
+
+.dark-mode .search-btn {
+  padding: 8px 16px;
+  background-color: rgba(2, 61, 69, 0.803);
+  border: 2px solid rgba(22, 228, 255, 0.721);
+  border-radius: 0px 7px 7px 0px;
+  cursor: pointer;
 }
 
 .search-btn {
@@ -340,6 +355,18 @@ footer div:nth-child(2) {
   justify-content: center;
   width: 350px;
   margin: 10px;
+  border-radius: 4%;
+}
+
+.dark-mode .trending-gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 350px;
+  margin: 10px;
+  background-color: rgba(2, 61, 69, 0.803);
+  border: 2px solid rgba(22, 228, 255, 0.721);
+  border-radius: 4%;
 }
 
 .trending-gif-container img {
@@ -450,6 +477,15 @@ input[type="file"] {
 
 /*THEME_BUTTON*/
 /* <button id="change-theme" type="button" class="theme-btn">⚙</button> */
+.dark-mode .theme-btn {
+  margin-left: 5px;
+  padding: 0px 7px;
+  background-color: rgba(2, 61, 69, 0.803);
+  border: 2px solid rgba(22, 228, 255, 0.721);
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 25px;
+}
 
 .theme-btn {
   margin-left: 5px;
@@ -468,6 +504,20 @@ input[type="file"] {
 
 
 /* Style the dropdown content (hidden by default) */
+.dark-mode .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(2, 61, 69, 0.803);
+  border: 2px solid rgba(22, 228, 255, 0.721);
+  border-radius: 7px;
+  cursor: pointer;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  right: 0; /* Position the dropdown content to the left */
+  top: calc(100% + 1px);
+}
+
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -482,6 +532,13 @@ input[type="file"] {
 }
 
 /* Style the dropdown links */
+.dark-mode .drop a {
+  color: #093845;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: double;
+}
+
 .dropdown-content a {
   color: #edd6d6;
   padding: 10px 15px;
