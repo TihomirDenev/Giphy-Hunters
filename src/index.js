@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('Please select a file.');
           return;
         }
-        alert('Please wait gif to be uploaded')
+        alert('Please wait gif to be uploaded');
         await uploadGifAsync(file);
         alert('File has been uploaded!');
       });
@@ -55,12 +55,29 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSearchItemsAsync(event.target.value);
       }
     });
+
+    q('#dark-theme').addEventListener('click', () => {
+      console.log('this is dark mode');
+      document.body.classList.add('dark-mode');
+    });
+
+    q('#cosmic-theme').addEventListener('click', () => {
+      console.log('this is light mode');
+      document.body.classList.remove('dark-mode');
+    });
+
+    q('#light-theme').addEventListener('click', () => {
+      q(CONTAINER_SELECTOR).innerHTML = renderVideoView();
+    });
   });
 
   document.addEventListener('scroll', () => {
     // check if user has scrolled to the bottom
     if (document.activeElement.dataset.page === 'trending-gifs') {
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight
+      ) {
         renderLoadMore();
       }
     }
@@ -68,4 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadPage(HOME);
 });
-
