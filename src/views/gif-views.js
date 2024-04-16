@@ -32,9 +32,9 @@ export const toGifDetailed = (gif) => `
         <img src="${gif.images.original.url}">
     </div>
     <div class="gif-info">
-        <h2>Type: ${gif.type}</h2><br>
-        <h2>Username: ${gif.username}</h2><br>
-        <h2>Upload Data: ${gif.import_datetime}</h2><br>
+        ${gif.type && `<h2>Type: ${gif.type}</h2><br>`}
+        ${gif.username && `<h2>Username: ${gif.username}</h2><br>`}
+        ${gif.import_datetime && `<h2>Upload Data: ${gif.import_datetime}</h2><br>`}
         <button class="nav-link" data-page="${previousPage}" id="Back" >Back</button>
     </div>
 </div>
