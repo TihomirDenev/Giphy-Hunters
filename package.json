@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "doc": "jsdoc array-utils.js",
+    "doc": "jsdoc",
     "lint": "eslint",
     "lint-fix": "eslint . --fix"
   },
