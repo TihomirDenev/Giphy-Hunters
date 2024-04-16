@@ -30,6 +30,34 @@ body {
   min-height: 100vh;
 }
 
+body.dark-mode{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: Verdana, Arial, system-ui, sans-serif;
+  font-size: 21px;
+  font-family: "Courier New", Courier, monospace;
+
+  color: #dbd4d4;
+  text-align: center;
+
+  background-image: url("/src/images/background2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.dark-mode .favorite {
+  color: #000; /* Change the color to black in dark mode */
+}
+
+.dark-mode .view-gif-btn {
+  background-color: #000;
+}
+
 ul {
   list-style-type: none;
 }
