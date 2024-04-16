@@ -61,17 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     q('#dark-theme').addEventListener('click', () => {
-      console.log('this is dark mode');
       document.body.classList.add('dark-mode');
     });
 
     q('#cosmic-theme').addEventListener('click', () => {
-      console.log('this is light mode');
       document.body.classList.remove('dark-mode');
     });
 
     q('#light-theme').addEventListener('click', () => {
-      q(CONTAINER_SELECTOR).innerHTML = renderVideoView();
+      renderVideoView();
     });
   });
 
