@@ -1,5 +1,5 @@
 export const toUploadGifView = () => `
-<div id="about">
+<div id="upload-gifs">
   <div class="content">
     <h1>Upload your own gif</h1>
     <br />
