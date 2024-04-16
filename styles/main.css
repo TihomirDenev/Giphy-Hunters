@@ -163,12 +163,11 @@ header {
   align-items: center;
   margin: 20px;
   padding: 20px;
-
   background-color: rgba(125, 118, 118, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 10px;
   max-width: 60%;
-  margin: 0 auto;
+  margin: 0px auto;
   margin-top: 20px;
 }
 
@@ -208,7 +207,6 @@ footer div:nth-child(2) {
 /* Style for the main container */
 
 #Trendy {
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -346,7 +344,7 @@ footer div:nth-child(2) {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: #dc3545;
+  color: #f0b506;
   cursor: pointer;
   width: 40px;
   height: 40px;

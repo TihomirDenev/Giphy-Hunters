@@ -1,5 +1,5 @@
 // public API
-import { API_KEY, GET_GIPHY_URL, UPLOAD_GIPHY_URL } from '../common/constants.js';
+import { API_KEY, GET_GIPHY_URL, LOAD_N_GIFS, UPLOAD_GIPHY_URL } from '../common/constants.js';
 import { addUploaded } from './uploaded.js';
 
 export const getGifsAsync = async () => {
@@ -9,6 +9,12 @@ export const getGifsAsync = async () => {
     );
     const data = await randomGif.json();
     const imageData = data.data;
+
+    if (!imageData) {
+      alert('Error getting gifs');
+      throw new Error(data.meta.msg);
+    }
+
     return imageData;
   } catch (e) {
     console.log(e.message);
@@ -21,6 +27,12 @@ export const getGifsByIdAsync = async (gifId = null) => {
       `${GET_GIPHY_URL}${gifId}?api_key=${API_KEY}`
     );
     const data = await gifByID.json();
+
+    if (!data.data) {
+      alert('Error getting gif by id');
+      throw new Error(data.meta.msg);
+    }
+
     return data.data;
   } catch (e) {
     console.log(e.message);
@@ -33,18 +45,30 @@ export const searchGifsAsync = async (searchTerm = '') => {
       `${GET_GIPHY_URL}search?api_key=${API_KEY}&q=${searchTerm}`
     );
     const dataJson = await response.json();
+
+    if (!dataJson.data) {
+      alert('Error searching gifs');
+      throw new Error(dataJson.meta.msg);
+    }
+
     return dataJson.data;
   } catch (e) {
     console.log(e.message);
   }
 };
 
-export const getTrendyGifAsync = async () => {
+export const getTrendyGifAsync = async (offSet = 0) => {
   try {
     const data = await fetch(
-      `${GET_GIPHY_URL}trending?api_key=${API_KEY}`
+      `${GET_GIPHY_URL}trending?api_key=${API_KEY}&limit=${LOAD_N_GIFS}&offset=${offSet}`
     );
     const getTrendyGif = await data.json();
+
+    if (!getTrendyGif.data) {
+      alert('Error getting trendy gifs');
+      throw new Error(getTrendyGif.meta.msg);
+    }
+
     return getTrendyGif;
   } catch (e) {
     console.log(e.message);
@@ -64,6 +88,12 @@ export const postGifAsync = async (file) => {
       }
     );
     const response = await data.json();
+
+    if (!response.data) {
+      alert('Error uploading gif');
+      throw new Error(response.meta.msg);
+    }
+
     addUploaded(response.data.id);
   } catch (e) {
     console.log(e.message);

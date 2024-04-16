@@ -21,8 +21,8 @@ export const loadGifDetailAsync = async (id = null) => {
 };
 
 // request for getting trendy gifs and return them
-export const loadTrendyGifAsync = async () => {
-  const trendyGifs = await getTrendyGifAsync();
+export const loadTrendyGifAsync = async (offSet = 0) => {
+  const trendyGifs = await getTrendyGifAsync(offSet);
   return trendyGifs;
 };
 
