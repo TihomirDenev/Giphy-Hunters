@@ -4,6 +4,7 @@ import { loadPage, renderGifDetailsAsync } from './events/navigation-events.js';
 import { renderSearchItemsAsync } from './events/search-events.js';
 import { toggleFavoriteStatus } from './events/favorites-events.js';
 import { uploadGifAsync } from './requests/request-service.js';
+import { renderLoadMore } from './events/load-more.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // add global listener
@@ -26,7 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Upload
     if (event.target.classList.contains('upload')) {
       const uploadForm = document.getElementById('uploadForm');
-      uploadForm.addEventListener('submit', handleFormSubmit);
+      uploadForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+
+        if (!file) {
+          alert('Please select a file.');
+          return;
+        }
+        alert('Please wait gif to be uploaded')
+        await uploadGifAsync(file);
+        alert('File has been uploaded!');
+      });
     }
 
     // search on button press
@@ -35,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSearchItemsAsync(searchInput.value);
     }
 
-      // search on key (enter) press
+    // search on key (enter) press
     q('input#search').addEventListener('keyup', (event) => {
       if (event.key === 'Enter') {
         renderSearchItemsAsync(event.target.value);
@@ -43,20 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.addEventListener('scroll', () => {
+    // check if user has scrolled to the bottom
+    if (document.activeElement.dataset.page === 'trending-gifs') {
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+        renderLoadMore();
+      }
+    }
+  });
+
   loadPage(HOME);
 });
 
-async function handleFormSubmit(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
-
-  const fileInput = document.getElementById('fileInput');
-  const file = fileInput.files[0];
-
-  if (!file) {
-    alert('Please select a file.');
-    return;
-  }
-  alert('Please wait gif to be uploaded')
-  await uploadGifAsync(file);
-  alert('File has been uploaded!');
-}
