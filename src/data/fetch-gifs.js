@@ -57,7 +57,7 @@ export const getGifsByIdAsync = async (gifId = null) => {
 export const searchGifsAsync = async (searchTerm = '') => {
   try {
     const response = await fetch(
-      `${GET_GIPHY_URL}search?api_key=${API_KEY}&q=${searchTerm}`
+      `${GET_GIPHY_URL}search?api_key=${API_KEY}&q=${searchTerm}&limit=${LOAD_N_GIFS}`
     );
     const dataJson = await response.json();
 
