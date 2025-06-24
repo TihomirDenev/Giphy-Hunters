@@ -1,61 +1,92 @@
-# <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Ffeatures.png?alt=media&token=e5fc5779-b3db-41c2-a576-947ca382ea5a&_gl=1*81oei1*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTgzLjAuMC4w"  width="30" height="30"> Giphy Hunters
+# <img src="./src/images/logo.png" width="30" height="30"> Giphy Hunters
 
-Gifs SPA application for searching and sharing funny gifs with your friends. The application can display the top trending gifs, upload gifs and much more! We are use the Giphy API.
+**Giphy Hunters** is a single-page web application for searching, viewing, uploading, and sharing GIFs using the [Giphy API](https://developers.giphy.com/). Browse trending GIFs, search for your favorites, upload your own, and manage your personal collection—all in one place!
 
-**Languages:** <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="20"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" height="20">
+---
 
-**Linters:** <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" height="20">
+## 🚀 Features
 
-**Browsers:** <img src="https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white" height="20"> <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" height="20">
+- **Trending GIFs:** Browse the top trending GIFs from Giphy.
+- **Search:** Find GIFs by keyword.
+- **Favorites:** Save your favorite GIFs to your browser's local storage.
+- **Upload:** Upload your own GIFs to Giphy.
+- **View Details:** See detailed information for each GIF.
+- **Uploaded GIFs:** View all GIFs you've uploaded.
+- **Themes:** Switch between Cosmic, Dark, and Light themes.
+- **Responsive UI:** Works on all modern browsers.
 
-## <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Ffaq.png?alt=media&token=12b5c59f-8faf-4cba-98f4-b6cd9329b78b&_gl=1*9f9cxq*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTYxLjAuMC4w"  width="30" height="30"> Features
+---
 
-- Fetches a random GIF from the GIPHY API.
-- Fetches top 18 trendy GIF from the GIPHY API.
-- Add favorites to your browser local storage.
-- Fetches a GIF by its ID from the GIPHY API.
-- Upload GIF to GIPHY.
-- Display all uploaded GIFS.
+## 🛠️ Tech Stack
 
-## <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Fstart.png?alt=media&token=ee8cc2b3-1a61-4519-9f96-59177216b4d6&_gl=1*t5p8co*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc4MDEzLjAuMC4w"  width="30" height="30"> Getting Started
+- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" height="20"> JavaScript (ES6+)
+- <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" height="20"> HTML5
+- <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" height="20"> CSS3
+- <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" height="20"> ESLint
 
-1. Clone the [Giphy Hunters GitHub repository](https://github.com/A58-Agents-Team1/Web-Project) locally:
+---
 
-```bash
-git clone https://github.com/A58-Agents-Team1/Web-Project.git
-```
+## 🖥️ Getting Started
 
-2. Navigate to the project directory:
+1. **Clone the repository:**
 
-```bash
-cd WEB_PROJECT
-```
+   ```bash
+   git clone https://github.com/A58-Agents-Team1/Web-Project.git
+   cd Giphy-Hunters
+   ```
 
-3. Install project dependencies:
+2. **Install dependencies:**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-4. To run the project, use the following command:
+3. **Start the application:**
 
-```bash
-npm start
-```
+   ```bash
+   npm start
+   ```
 
-5. Open localhost link in browser to view web-platform.
+   The app will be available at `http://localhost:3000` (or similar).
 
-## <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Fresources.png?alt=media&token=9fe5f5ee-5413-4af3-a50b-c7f01650d1fe&_gl=1*4u0xo2*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTk4LjAuMC4w"  width="30" height="30"> Usage
+4. **Open in your browser** and enjoy!
 
-How to use the application:
+> **Note:** The app uses the public Giphy API key. For production use, you may want to set your own API key in the code.
 
-- Call the `getGifsAsync` function to fetch a random GIF.
-- Call the `getGifById` function with a GIF ID to fetch a specific GIF.
+---
 
-## <img src="https://firebasestorage.googleapis.com/v0/b/dare2fit-f6eb4.appspot.com/o/assets%2FREADME-images%2Fcommunity.png?alt=media&token=893ecd6f-908b-4c1e-9223-25d82f1bb8b1&_gl=1*watnuy*_ga*MjExMzk5MTA5MC4xNjgzMjcwMjg1*_ga_CW55HF8NVT*MTY4NjU3Njg5Ni4xMDMuMS4xNjg2NTc3OTI1LjAuMC4w"  width="30" height="30"> Community and Contributions
+## 📚 Usage
 
-- [Tanya Zhecheva](https://github.com/TanyaZhecheva) Clicking on the name will take you to the GitHub profile of Tanya Zhecheva.
+- **Home:** See a random GIF and introduction.
+- **Trending GIFs:** View the top trending GIFs.
+- **Search:** Use the search bar to find GIFs by keyword.
+- **Favorites:** Click the heart icon to save GIFs to your favorites.
+- **Upload GIF:** Use the upload form to add your own GIFs to Giphy.
+- **Uploaded GIFs:** View all GIFs you've uploaded.
+- **Themes:** Click the settings icon to switch between Cosmic, Dark, and Light themes.
 
-- [Tihomir Denev](https://github.com/TihomirDenev) Clicking on the name will take you to the GitHub profile of Tihomir Denev.
+---
 
-- [Radoslav Marinov](https://github.com/Radoslav-Marinovv) Clicking on the name will take you to the GitHub profile of Radoslav Marinov.
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+---
+
+## 👥 Authors
+
+- [Tanya Zhecheva](https://github.com/TanyaZhecheva)
+- [Tihomir Denev](https://github.com/TihomirDenev)
+- [Radoslav Marinov](https://github.com/Radoslav-Marinovv)
+
+---
+
+## 📄 License
+
+This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 💡 Acknowledgements
+
+- Powered by [Giphy](https://giphy.com/)
