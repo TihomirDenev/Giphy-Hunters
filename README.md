@@ -4,6 +4,12 @@
 
 ---
 
+## 🚀 Live Demo
+
+Check out the live app here: [Giphy Hunters](https://giphy-hunters.vercel.app/#)
+
+---
+
 ## 🚀 Features
 
 - **Trending GIFs:** Browse the top trending GIFs from Giphy.
