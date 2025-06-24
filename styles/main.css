@@ -110,6 +110,8 @@ nav {
 }
 
 header {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -183,7 +185,7 @@ header {
 }
 
 .dark-mode .search-btn {
-  padding: 8px 16px;
+  padding: 0 10px;
   border: 2px solid rgba(22, 228, 255, 0.721);
   border-radius: 0px 7px 7px 0px;
   cursor: pointer;
@@ -191,7 +193,8 @@ header {
 }
 
 .search-btn {
-  padding: 8px 16px;
+  height: 2.2rem;
+  padding: 0 10px;
   border: 2px solid rgba(240, 109, 6, 0.3);
   border-radius: 0px 7px 7px 0px;
   cursor: pointer;
@@ -504,9 +507,10 @@ input[type="file"] {
 .dark-mode .dropdown-content {
   position: absolute;
   top: calc(100% + 1px);
-  right: 0; /* Position the dropdown content to the left */
+  right: 0;
+  z-index: 1000;
   display: none;
-  min-width: 180px;
+  min-width: 200px;
   border: 2px solid rgba(22, 228, 255, 0.721);
   border-radius: 7px;
   cursor: pointer;
@@ -517,9 +521,10 @@ input[type="file"] {
 .dropdown-content {
   position: absolute;
   top: calc(100% + 1px);
-  right: 0; /* Position the dropdown content to the left */
+  right: 0;
+  z-index: 1000;
   display: none;
-  min-width: 180px;
+  min-width: 200px;
   border: 2px solid rgba(240, 109, 6, 0.3);
   border-radius: 7px;
   cursor: pointer;
